@@ -1,0 +1,178 @@
+//Varibles, now these are acctually better format than css, so these are cool! 
+
+// Font
+
+$navbar-font-list: helvetica, arial
+
+//Colors
+
+$navbar-bg: rgba(15, 23, 42, 0.94)
+$navbar-text: #e2e8f0
+$navbar-accent: #60a5fa
+$navbar-hover: #93c5fd
+$mobile-menu-bg: rgba(15, 23, 42, 0.98)
+$link-hover-bg-mobile: rgba(96, 165, 250, 0.18)
+
+//Sizing
+
+$navbar-height: 5.2rem
+$navbar-padding-x: 5%
+$logo-font-size: 1.8rem
+$nav-link-font-size-desktop: 1rem
+$nav-link-font-size-mobile: 1.15rem
+$link-gap-desktop: 2.6rem
+$link-gap-mobile: 0.8rem
+$mobile-menu-padding: 2rem 5% 2.5rem
+$mobile-link-padding: 1.15rem 1.4rem
+$underline-width: 70%
+
+//Animations
+
+$transition-fast: 0.22s ease
+$transition-medium: 0.35s ease-out
+$transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1)
+$underline-grow-duration: 0.3s ease-out
+$mobile-slide-distance: -20px
+$hover-scale: 1.04
+$hover-translate: 8px
+
+// @mixin, this is a self reminder, please remember to not use { } or ; because you are the one who chose to write in sass and not you favorite css, make better choices. . .
+
+@mixin respond-to($breakpoint)
+    @if $breakpoint == small
+        @media (max-width: 768px)
+            @content
+    @else if $breakpoint == medium
+        @media (max-width: 1024px)
+            @content
+
+//Global 
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+//navigation 
+
+.navbar,
+.navbar a,
+.navbar button,
+.logo
+    line-height: 1
+
+.navbar
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    height: $navbar-height
+    padding: 0 $navbar-padding-x
+
+    background-color: $navbar-bg
+    color: $navbar-text
+
+    position: sticky
+    top: 0
+    z-index: 1000
+
+    font-family: $navbar-font-list
+    font-smooth: always
+
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18)
+
+.logo
+    font-size: $logo-font-size
+    font-weight: 800
+    color: $navbar-accent
+    text-decoration: none
+    letter-spacing: -0.5px
+
+.nav-links
+    display: flex
+    gap: $link-gap-desktop
+    list-style: none
+
+    a
+        position: relative
+        font-size: $nav-link-font-size-desktop
+        color: $navbar-text
+        text-decoration: none
+        font-weight: 500
+        transition: color $transition-fast
+
+    a::after
+        content: ''
+        position: absolute
+        width: 0
+        height: 2px
+        bottom: 0
+        left: 50%
+        background: $navbar-accent
+        transition: width $underline-grow-duration
+        transform: translateX(-50%)
+
+    a:hover::after,
+    a.active::after
+        width: $underline-width
+
+    a:hover,
+    a.active
+        color: $navbar-hover
+
+.menu-toggle
+    display: none
+    font-size: 2.2rem
+    background: none
+    border: none
+    color: $navbar-text
+    cursor: pointer
+    padding: 0.6rem
+
+@include respond-to(small)
+
+    .menu-toggle
+        display: block
+
+    .nav-links.active
+        transform: translateY(0)
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+
+    .nav-links
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+
+        flex-direction: column
+        background: $mobile-menu-bg
+        padding: $mobile-menu-padding
+        gap: $link-gap-mobile
+
+        transform: translateY(-20px)
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
+        transition: all $transition-smooth
+        backdrop-filter: blur(10px)
+
+        a
+            display: block
+            padding: $mobile-link-padding
+            font-size: $nav-link-font-size-mobile
+            border-radius: 8px
+            transition: all $transition-medium
+
+        a:hover,
+        a.active
+            background: $link-hover-bg-mobile
+            color: $navbar-accent
+            transform: $hover-translate
+
+        a::after
+            display: none

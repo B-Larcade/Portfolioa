@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foley & Sound Design | Braxtyn Larcade</title>
+    <link rel="stylesheet" href="Sass/foley.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar">
+        <a href="index.html" class="logo">Braxtyn Larcade</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="website.html">Website</a></li>
+            <li><a href="foley.html" class="active">Foley</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fireworks background canvas (blurred for softness) -->
+    <canvas id="fireworks-canvas" class="background-canvas"></canvas>
+
+    <main class="foley-main">
+        <!-- Hero / Header -->
+        <section class="hero-section glass-card">
+            <h1 class="title-with-bg">Foley & Sound Design</h1>
+            <p class="lead">
+                Upcoming AA Game Foley artist & Audio director
+            </p>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="websites-grid">
+            <article class="website-card glass-card">
+                <div class="card-image">
+                    <img src="Images/grimtango-placeholder.png" alt="GRIMTANGO Audio"
+                        onerror="this.src='https://via.placeholder.com/460x260/1a1e2a/ffffff?text=GRIMTANGO'">
+                </div>
+                <h3>GRIMTANGO</h3>
+                <p class="tech">Lead Audio Director • Foley Artist • SFX Design • Team Management</p>
+                <p>
+                    Directing the full audio experience for an upcoming AA-scale indie game (scheduled release November
+                    2026). Responsibilities include custom Foley recording, sound effects creation, audio direction,
+                    team coordination, and integration into Godot engine with dynamic behaviors and spatial audio.
+                </p>
+                <div class="card-links">
+                    <a href="contact.html" target="_blank">Hire Me</a>
+                </div>
+            </article>
+
+            <article class="website-card glass-card">
+                <div class="card-image">
+                    <img src="Images/shiba-placeholder.png" alt="Run Shiba Run SFX"
+                        onerror="this.src='https://via.placeholder.com/460x260/1a1e2a/ffffff?text=Run+Shiba+Run'">
+                </div>
+                <h3>Run, Shiba, Run!</h3>
+                <p class="tech">Sound Effects Developer • Audacity • Steam Release</p>
+                <p>
+                    Created and implemented over 50 custom sound effects for "Run, Shiba, Run!", a promotional game
+                    released on Steam. Focused on fast iteration, responsive audio, and high polish under tight
+                    deadlines. Contributed to multiple game jam entries as practice for rapid production.
+                </p>
+                <div class="card-links">
+                    <a href="https://generalisk.itch.io/run-shiba-run" target="_blank">Play on Demo on Itch</a>
+                </div>
+            </article>
+
+            <article class="website-card glass-card">
+                <div class="card-image">
+                    <img src="Images/horror-jam-placeholder.png" alt="Horror Game Jam"
+                        onerror="this.src='https://via.placeholder.com/460x260/1a1e2a/ffffff?text=Horror+Jam'">
+                </div>
+                <h3>Scariest Game – Honorable Mention</h3>
+                <p class="tech">Sound Designer • Adaptive Horror Audio • Godot</p>
+                <p>
+                    Designed layered ambient tension, dynamic scare triggers, and immersive horror soundscapes for a
+                    game jam entry. Earned Honorable Mention for Scariest Game. Focused on psychological audio design
+                    and player-driven reactivity.
+                </p>
+                <div class="card-links">
+                    <a href="https://fresh4.itch.io/gorefactory" target="_blank">Play on Itch.io</a>
+                </div>
+            </article>
+
+            <article class="website-card glass-card">
+                <div class="card-image">
+                    <img src="Images/jam-placeholder.png" alt="GMTK Jam"
+                        onerror="this.src='https://via.placeholder.com/460x260/1a1e2a/ffffff?text=GMTK+Jam'">
+                </div>
+                <h3>GMTK Game Jam 2025</h3>
+                <p class="tech">Career Starter • SFX & Ambience • Rapid Prototyping</p>
+                <p>
+                    Created sound effects for the first game in this career, kickstarted the notibility for the rest of
+                    these more recent creation. Also, created the knowlege and prestige in Foley and Sound Effects
+                    creation.
+                    <br>
+                    <br>
+                    <br>
+                </p>
+                <div class="card-links">
+                    <a href="https://cabycat.itch.io/death-of-the-flower" target="_blank">Play Entry</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Tools & Workflow Section -->
+        <section class="tools-section glass-card">
+            <div class="hero-section" id="tools">
+                <h2>Tools & Workflow</h2>
+                <p class="tools-intro">
+                    I combine professional software with creative real-world recording techniques to achieve authentic,
+                    high-quality sound.
+                </p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🎧</span>
+                    <strong>Audacity</strong>
+                    <p>Layering & Editing</p>
+                </div>
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🎤</span>
+                    <strong>SnowBall Blue Ice</strong>
+                    <p>Precision Capture & voice acting</p>
+                </div>
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🎙️</span>
+                    <strong>AU-PM360TR</strong>
+                    <p>Field Recording</p>
+                </div>
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🧊</span>
+                    <strong>AU-AM200</strong>
+                    <p>Media Processor</p>
+                </div>
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🔧</span>
+                    <strong>Household Props & Found Objects</strong>
+                    <p>Creative Sources</p>
+                </div>
+                <div class="tool-item glass-inner">
+                    <span class="tool-icon">🌐</span>
+                    <strong>Personal Library</strong>
+                    <p>Extensive Field of Sound Effects</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section glass-card">
+            <h2>Ready to Make Your Project Sound Unforgettable?</h2>
+            <p>
+                When people see <b>Your game</b>, the sound effects make the game — I’d love to collaborate and
+                bring your vision to life with custom Foley and sound design.
+            </p>
+            <a href="#contact-link" class="cta-button">Let's Talk Audio</a>
+        </section>
+    </main>
+
+    <!--<script src="js/foley_canvas.js"></script>-->
+</body>
+
+</html>

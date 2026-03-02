@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites | Braxtyn Larcade | Portfolio</title>
+    <link rel="stylesheet" href="Sass/website.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar">
+        <a href="index.html" class="logo">Braxtyn Larcade</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="website.html" class="active">Website</a></li>
+            <li><a href="foley.html">Foley</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <canvas id="space-canvas" class="background-canvas"></canvas>
+
+    <main class="websites-container">
+        <header class="page-header glass-card">
+            <h1>Websites Developed</h1>
+            <p id="header-paragraph-text">Focused on Responsitivity and User Experience, built using HTML5, CSS/SASS,
+                JavaScript. </p>
+        </header>
+
+        <section class="websites-grid">
+            <article class="website-card glass-card">
+                <div class="card-image-placeholder">
+                    <img src="Images/FBLA.png" alt="screenshot">
+                </div>
+                <h3>FBLA Nationals Website</h3>
+                <p class="tech">HTML5 • SASS • JavaScript (ES6+) • Responsive Design</p>
+                <p>Award-winning site: 1st Place Kansas FBLA State, advanced to Nationals in Anaheim, CA. Interactive
+                    elements, clean UX, mobile-first.</p>
+                <div class="card-links">
+                    <a href="" target="_blank">Live Site</a>
+                    <a href="https://github.com/B-Larcade/FBLA-Nationals-2025" target="_blank">GitHub</a>
+                </div>
+            </article>
+
+            <article class="website-card glass-card">
+                <div class="card-image-placeholder">
+                    <img src="Images/MBC.png" alt="screenshot">
+                </div>
+                <h3>Local Wichita Musician Portfolio Site</h3>
+                <p class="tech">HTML5 • CSS • Vanilla JS</p>
+                <p>Custom site for a Wichita community member: responsive layout, user faced website, Public service.
+                </p>
+                <div class="card-links">
+                    <a href="https://b-larcade.github.io/MBC-JAY-s-Portfolio/" target="_blank">Live Site</a>
+                    <a href="https://github.com/B-Larcade/MBC-JAY-s-Portfolio" target="_blank">GitHub</a>
+                </div>
+            </article>
+
+            <article class="website-card glass-card">
+                <div class="card-image-placeholder">
+                    <img src="Images/portfolio-example.png" alt="screenshot">
+                </div>
+                <h3>Personal Portfolio Website</h3>
+                <p class="tech">HTML5 • SASS • JavaScript</p>
+                <p>Extensive Javascript animations and flawless user Experience.</p>
+                <div class="card-links">
+                    <a href="index.html" target="_blank">Live Demo</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="js/website_canvas.js"></script>
+</body>
+
+</html>

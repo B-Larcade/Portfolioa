@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar,
+.navbar a,
+.navbar button,
+.logo {
+  line-height: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.2rem;
+  padding: 0 5%;
+  background-color: rgba(15, 23, 42, 0.94);
+  color: #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: helvetica, arial;
+  font-smooth: always;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #60a5fa;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.6rem;
+  list-style: none;
+}
+.nav-links a {
+  position: relative;
+  font-size: 1rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.22s ease;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: #60a5fa;
+  transition: width 0.3s ease-out;
+  transform: translateX(-50%);
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 70%;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #93c5fd;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2.2rem;
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(15, 23, 42, 0.98);
+    padding: 2rem 5% 2.5rem;
+    gap: 0.8rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .nav-links a {
+    display: block;
+    padding: 1.15rem 1.4rem;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    transition: all 0.35s ease-out;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(96, 165, 250, 0.18);
+    color: #60a5fa;
+    transform: 8px;
+  }
+  .nav-links a::after {
+    display: none;
+  }
+}
+body.dark-theme {
+  background: linear-gradient(135deg, #0a0f1a 0%, #111827 100%);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 20px;
+  color: white;
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  margin-bottom: 10vh;
+}
+
+.websites-container {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 5%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+  background: linear-gradient(90deg, #ffffff, #5a5a5a);
+  margin-bottom: 1.25rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.25s;
+}
+h1:hover {
+  scale: 1.04;
+}
+
+.websites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-rows: repeat(1fr);
+  gap: 2.5rem;
+}
+
+.website-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease-out;
+}
+.website-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(96, 165, 250, 0.18);
+}
+
+.card-image-placeholder {
+  height: 220px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.8rem 0.8rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(226, 232, 240, 0.5);
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #60a5fa;
+  margin: 1.2rem 1.5rem 0.4rem;
+}
+
+.tech {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin: 0 1.5rem 0.8rem;
+  font-style: italic;
+}
+
+p {
+  margin: 0 1.5rem 1.2rem;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+#header-paragraph-text:hover {
+  scale: 1.09;
+  color: rgb(200, 200, 200);
+}
+
+.card-links {
+  margin-top: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.card-links a {
+  color: #93c5fd;
+  text-decoration: none;
+  transition: 0.22s ease;
+}
+.card-links a:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}/*# sourceMappingURL=website.css.map */

@@ -1,0 +1,213 @@
+// Foley Page – premium, clean, spacious, and fun with fireworks
+body
+    background: #535353
+.background-canvas
+    position: fixed
+    inset: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+    pointer-events: none
+    filter: blur(20px) brightness(0.55) opacity(0.6) // softens fireworks
+
+.foley-main
+    max-width: 1400px
+    margin: 0 auto
+    padding: 0 4%
+
+#tools
+    margin: 0rem 0rem 2rem
+
+.hero-section
+    padding: 8rem 2rem 2rem
+    text-align: center
+    background: rgba(15, 17, 25, 0.72)
+    backdrop-filter: blur(24px)
+    border-radius: 2rem
+    border: 1px solid rgba(100, 130, 180, 0.2)
+    box-shadow: 0 24px 90px rgba(0,0,0,0.65)
+    margin: 2rem 0rem 2rem
+    transition: all 1s
+    &:hover
+        transform: translateY(-12px)
+        box-shadow: 0 36px 105px rgba(0,0,0,0.85)
+
+h1.title-with-bg
+    font-size: 6rem
+    color: white
+    font-weight: 900
+    margin-bottom: 1.6rem
+
+.lead
+    font-size: 1.65rem
+    max-width: 960px
+    margin: 0 auto 4.5rem
+    opacity: 0.94
+    line-height: 1.75
+
+.hero-stats
+    display: flex
+    justify-content: center
+    gap: 4.5rem
+    flex-wrap: wrap
+    font-size: 1.35rem
+    opacity: 0.9
+
+    div
+        padding: 1.2rem 2.5rem
+        border: 1px solid rgba(140, 170, 220, 0.28)
+        border-radius: 3.5rem
+        background: rgba(18, 22, 32, 0.5)
+        backdrop-filter: blur(10px)
+
+.websites-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr))
+    gap: 3rem
+    padding: 4rem 0 10rem
+
+.website-card
+    border-radius: 2rem
+    overflow: hidden
+    background: rgba(12, 14, 22, 0.9)
+    backdrop-filter: blur(22px)
+    border: 1px solid rgba(100, 130, 180, 0.22)
+    box-shadow: 0 20px 80px rgba(0,0,0,0.6)
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+    &:hover
+        transform: translateY(-28px)
+        box-shadow: 0 50px 140px rgba(80, 130, 200, 0.35)
+        border-color: rgba(130, 170, 240, 0.4)
+
+.card-image
+    height: 340px
+    overflow: hidden
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: transform 0.7s ease
+
+    &:hover .card-image img
+        transform: scale(1.12)
+
+h3
+    padding: 2.2rem 2.6rem 0.8rem
+    font-size: 2.2rem
+    color: #fff
+    font-weight: 700
+
+.tech
+    padding: 0 2.6rem
+    font-size: 1.1rem
+    color: rgba(255, 255, 255, 0.75)
+    font-style: italic
+
+p
+    padding: 1.4rem 2.6rem 2.2rem
+    line-height: 1.8
+    font-size: 1.18rem
+    color: rgba(240, 240, 255, 0.92)
+
+.card-links
+    padding: 0 2.6rem 2.6rem
+    display: flex
+    gap: 1.5rem
+
+    a
+        color: #ffd93d
+        text-decoration: none
+        font-weight: 600
+        font-size: 1.05rem
+        transition: all 0.35s ease
+
+    &:hover
+        color: #ff6b6b
+        text-decoration: underline
+
+.tools-section
+    padding: 10rem 0 6rem
+
+h2
+    text-align: center
+    font-size: 3.8rem
+    margin-bottom: 3.5rem
+    background: linear-gradient(90deg, #c0d4ff, #e8f0ff)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.tools-intro
+    text-align: center
+    font-size: 1.4rem
+    max-width: 900px
+    margin: 0 auto 5rem
+    opacity: 0.92
+    line-height: 1.7
+
+.tools-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 2.8rem
+
+.tool-item
+    background: rgba(18, 20, 28, 0.78)
+    padding: 2.5rem
+    border-radius: 1.6rem
+    border: 1px solid rgba(100, 130, 180, 0.18)
+    text-align: center
+    transition: all 0.45s ease
+
+    &:hover
+        transform: translateY(-14px)
+        box-shadow: 0 24px 70px rgba(80, 120, 180, 0.25)
+        border-color: rgba(140, 180, 240, 0.35)
+
+    strong
+        font-size: 1.45rem
+        color: #d8e4ff
+        display: block
+        margin: 1rem 0 0.8rem
+
+    p
+        font-size: 1.1rem
+        opacity: 0.88
+
+.cta-section
+    text-align: center
+    padding: 10rem 4rem 12rem
+    background: rgba(20, 22, 30, 0.82)
+    backdrop-filter: blur(28px)
+    border-radius: 2.2rem
+    border: 1px solid rgba(100, 140, 200, 0.22)
+    margin: 0 4% 8rem
+    box-shadow: 0 28px 100px rgba(0,0,0,0.65)
+
+h2
+    font-size: 4rem
+    margin-bottom: 2rem
+    background: linear-gradient(90deg, #d0e0ff, #f0f8ff)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+p
+    font-size: 1.45rem
+    max-width: 820px
+    margin: 0 auto 3.5rem
+    opacity: 0.92
+
+.cta-button
+    display: inline-block
+    padding: 1.4rem 4rem
+    background: linear-gradient(90deg, #6b9eff, #a0c0ff)
+    color: #0f172a
+    font-weight: 700
+    font-size: 1.45rem
+    border-radius: 3.5rem
+    text-decoration: none
+    transition: all 0.45s ease
+
+    &:hover
+        transform: translateY(-8px)
+        box-shadow: 0 24px 70px rgba(107,158,255,0.45)

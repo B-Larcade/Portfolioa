@@ -1,0 +1,180 @@
+body
+    background: linear-gradient(to bottom, black, #2b2b2b)
+.home-main
+    max-width: 1600px
+    margin: 0 auto
+    padding: 0 6%
+
+.hero-section
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10rem 4rem 8rem
+    text-align: center
+    background: linear-gradient(to bottom, #0f172a, #0a0f1a)
+    border-radius: 0 0 100px 100px
+
+.hero-content
+    max-width: 1200px
+
+.hero-image
+    width: 100%
+    max-width: 500px
+    border-radius: 1.2rem
+    margin-bottom: 5rem
+    box-shadow: 0 40px 120px rgba(0,0,0,0.8)
+    border: 1px solid rgba(96, 165, 250, 0.2)
+    transition: all 1s
+    &:hover
+        scale: 1.12
+
+h1
+    font-size: 7.5rem
+    font-weight: 900
+    color: #e2e8f0
+    margin-bottom: 1.5rem
+    letter-spacing: -3px
+
+.tagline
+    font-size: 2.8rem
+    color: #93c5fd
+    margin-bottom: 2.5rem
+    font-weight: 500
+
+.intro
+    font-size: 1.7rem
+    max-width: 1000px
+    margin: 0 auto 6rem
+    color: #cbd5e1
+    line-height: 1.8
+
+.quick-links
+    display: flex
+    justify-content: center
+    gap: 3rem
+    flex-wrap: wrap
+
+    .quick-link
+        padding: 1.4rem 3.5rem
+        background: rgba(96, 165, 250, 0.12)
+        backdrop-filter: blur(12px)
+        border: 1px solid rgba(96, 165, 250, 0.35)
+        border-radius: 3rem
+        color: #e2e8f0
+        text-decoration: none
+        font-weight: 600
+        font-size: 1.4rem
+        transition: all 0.4s ease
+a:not(.logo, .nav-links a )
+    &:hover
+        background: rgba(96, 165, 250, 0.25)
+        transform: translateY(-6px)
+        box-shadow: 0 20px 60px rgba(96, 165, 250, 0.3)
+
+.highlights-section
+    padding: 12rem 0 16rem
+    background: #0f172a
+    border-radius: 100px
+
+h2
+    text-align: center
+    font-size: 4.2rem
+    color: #e2e8f0
+    margin-bottom: 6rem
+
+.highlights-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+    gap: 2rem
+    margin: 1rem 0 1rem 0
+
+.highlight-card
+    background: rgba(15, 23, 42, 0.7)
+    backdrop-filter: blur(16px)
+    border-radius: 1.6rem
+    padding: 3.5rem
+    border: 1px solid rgba(96, 165, 250, 0.18)
+    box-shadow: 0 16px 64px rgba(0,0,0,0.5)
+    transition: all 0.5s ease
+
+    &:hover
+        transform: translateY(-12px)
+        box-shadow: 0 32px 100px rgba(96, 165, 250, 0.25)
+
+    h3
+        font-size: 2.2rem
+        color: #93c5fd
+        margin-bottom: 1.5rem
+
+    p
+        font-size: 1.35rem
+        color: #cbd5e1
+        line-height: 1.7
+
+.about-section
+    padding: 12rem 0 8rem
+    background: linear-gradient(to bottom, #0f172a, #0a0f1a)
+    border-radius: 100px
+
+h2
+    text-align: center
+    font-size: 4rem
+    color: #e2e8f0
+    margin-bottom: 4rem
+
+p
+    font-size: 1.5rem
+    max-width: 1000px
+    margin: 0 auto 3rem
+    color: #cbd5e1
+    line-height: 1.8
+    text-align: center
+
+.skills-grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 2rem
+    margin-top: 4rem
+    margin-bottom: 5rem
+
+    span
+        background: rgba(96, 165, 250, 0.15)
+        color: #93c5fd
+        padding: 1rem 2rem
+        border-radius: 3rem
+        font-size: 1.4rem
+        font-weight: 500
+
+.cta-section
+    padding: 12rem 0 16rem
+    text-align: center
+    background: #0a0f1a
+    border-radius: 100px
+
+    h2
+        font-size: 4.5rem
+        color: #e2e8f0
+        margin-bottom: 2rem
+    h3
+        color: white
+    p
+        font-size: 1.6rem
+        max-width: 900px
+        margin: 0 auto 4rem
+        color: #cbd5e1
+
+.cta-button
+    padding: 1.6rem 4.5rem
+    background: linear-gradient(90deg, #60a5fa, #93c5fd)
+    color: #0f172a
+    font-weight: 700
+    font-size: 1.6rem
+    border-radius: 3.5rem
+    text-decoration: none
+    transition: all 0.4s ease
+
+    &:hover
+        transform: translateY(-6px)
+        box-shadow: 0 20px 60px rgba(96, 165, 250, 0.5)

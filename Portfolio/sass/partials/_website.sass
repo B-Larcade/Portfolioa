@@ -1,0 +1,132 @@
+//Varibles, now these are acctually better format than css, so these are cool! 
+
+// Font
+
+$navbar-font-list: helvetica, arial
+
+//Colors
+
+$navbar-bg: rgba(15, 23, 42, 0.94)
+$navbar-text: #e2e8f0
+$navbar-accent: #60a5fa
+$navbar-hover: #93c5fd
+$mobile-menu-bg: rgba(15, 23, 42, 0.98)
+$link-hover-bg-mobile: rgba(96, 165, 250, 0.18)
+
+//Sizing
+
+$navbar-height: 5.2rem
+$navbar-padding-x: 5%
+$logo-font-size: 1.8rem
+$nav-link-font-size-desktop: 1rem
+$nav-link-font-size-mobile: 1.15rem
+$link-gap-desktop: 2.6rem
+$link-gap-mobile: 0.8rem
+$mobile-menu-padding: 2rem 5% 2.5rem
+$mobile-link-padding: 1.15rem 1.4rem
+$underline-width: 70%
+
+//Animations
+
+$transition-fast: 0.22s ease
+$transition-medium: 0.35s ease-out
+$transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1)
+$underline-grow-duration: 0.3s ease-out
+$mobile-slide-distance: -20px
+$hover-scale: 1.04
+$hover-translate: 8px
+
+body.dark-theme
+    background: linear-gradient(135deg, #0a0f1a 0%, #111827 100%)
+
+.glass-card
+    background: rgba(15, 23, 42, 0.95)
+    border-radius: clamp(10px, 20px, 30px)
+    color: white
+    border: 1px solid rgba($navbar-accent, 0.15)
+    margin-bottom: clamp(5vh, 10vh, 15vh)
+
+.websites-container
+    max-width: 1200px
+    margin: 2.5rem auto
+    padding: 0 $navbar-padding-x
+    position: relative
+    z-index: 1
+
+.page-header
+    text-align: center
+    padding: 5rem 2rem 3rem
+
+h1
+    font-size: 3.8rem
+    background: linear-gradient(90deg, #ffffff, #5a5a5a)
+    margin-bottom: 1.25rem
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    transition: all 0.25s
+
+    &:hover
+        scale: 1.04
+
+.websites-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+    grid-template-rows: repeat(1fr)
+    gap: 2.5rem
+
+.website-card
+    display: flex
+    flex-direction: column
+    transition: all $transition-medium
+
+    &:hover
+        transform: translateY(-12px)
+        box-shadow: 0 20px 60px rgba($navbar-accent, 0.18)
+
+.card-image-placeholder
+    height: 220px
+    background: rgba(0, 0, 0, 0.4)
+    border-radius: 0.8rem 0.8rem 0 0
+    display: flex
+    align-items: center
+    justify-content: center
+    color: rgba($navbar-text, 0.5)
+    font-style: italic
+img
+    width: 100%
+    margin-bottom: 2rem
+    border-radius: 10px
+h3
+    font-size: 1.6rem
+    color: $navbar-accent
+    margin: 1.2rem 1.5rem 0.4rem
+
+.tech
+    font-size: 0.95rem
+    opacity: 0.7
+    margin: 0 1.5rem 0.8rem
+    font-style: italic
+
+p
+    margin: 0 1.5rem 1.2rem
+    line-height: 1.5
+    transition: all 0.3s
+
+#header-paragraph-text:hover
+    scale: 1.09
+    color: rgba(200, 200, 200, 1)
+
+.card-links
+    margin-top: auto
+    padding: 1rem 1.5rem
+    display: flex
+    gap: 1rem
+
+    a
+        color: $navbar-hover
+        text-decoration: none
+        transition: $transition-fast
+
+    a:hover
+        color: $navbar-accent
+        text-decoration: underline

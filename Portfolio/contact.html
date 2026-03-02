@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Braxtyn Larcade</title>
+    <link rel="stylesheet" href="Sass/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar">
+        <a href="#" class="logo">Braxtyn Larcade</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="website.html">Website</a></li>
+            <li><a href="foley.html">Foley</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dark gradient background -->
+    <div class="dark-bg"></div>
+
+    <main class="contact-main">
+        <header class="page-header glass-card">
+            <h1>Get in Touch</h1>
+            <p>
+                Have a project in mind? Want to chat audio, web dev, or creative ideas? Reach out via any of these
+                links:
+            </p>
+        </header>
+
+        <section class="contact-section glass-card">
+            <div class="contact-info">
+                <a href="mailto:larcade.braxtyn19@gmail.com" class="contact-item">
+                    <span class="icon">✉️</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p>larcade.braxtyn19@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://x.com/BLarcade" target="_blank" class="contact-item">
+                    <span class="icon">𝕏</span>
+                    <div>
+                        <strong>X</strong>
+                        <p>@BLarcade</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/B-Larcade" target="_blank" class="contact-item">
+                    <span class="icon">💻</span>
+                    <div>
+                        <strong>GitHub</strong>
+                        <p>github.com/B-Larcade</p>
+                    </div>
+                </a>
+
+                <a href="https://braxtyn-larcade.itch.io" target="_blank" class="contact-item">
+                    <span class="icon">🎮</span>
+                    <div>
+                        <strong>Itch.io / Game Jams</strong>
+                        <p>braxtyn-larcade.itch.io</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Code Breaker Game – now in place of the form -->
+        <section class="game-section glass-card">
+            <h2>Quick Tech Game: Code Breaker</h2>
+            <p>Guess the 4-digit code (0–9, no repeats). Get hints: correct position or correct number.</p>
+
+            <div class="code-breaker">
+                <div class="input-area">
+                    <input type="text" id="guess-input" maxlength="4" placeholder="Enter 4 digits">
+                    <button id="submit-guess">Guess</button>
+                </div>
+                <div id="feedback" class="feedback"></div>
+                <div id="attempts">Attempts: 0 / 10</div>
+                <button id="new-game" class="new-game-btn">New Game</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

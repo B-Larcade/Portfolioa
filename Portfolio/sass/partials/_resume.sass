@@ -1,0 +1,245 @@
+//Varibles, now these are acctually better format than css, so these are cool! 
+
+// Font
+
+$navbar-font-list: helvetica, arial
+
+//Colors
+
+$navbar-bg: rgba(15, 23, 42, 0.94)
+$navbar-text: #e2e8f0
+$navbar-accent: #60a5fa
+$navbar-hover: #93c5fd
+$mobile-menu-bg: rgba(15, 23, 42, 0.98)
+$link-hover-bg-mobile: rgba(96, 165, 250, 0.18)
+
+//Sizing
+
+$navbar-height: 5.2rem
+$navbar-padding-x: 5%
+$logo-font-size: 1.8rem
+$nav-link-font-size-desktop: 1rem
+$nav-link-font-size-mobile: 1.15rem
+$link-gap-desktop: 2.6rem
+$link-gap-mobile: 0.8rem
+$mobile-menu-padding: 2rem 5% 2.5rem
+$mobile-link-padding: 1.15rem 1.4rem
+$underline-width: 70%
+
+//Animations
+
+$transition-fast: 0.22s ease
+$transition-medium: 0.35s ease-out
+$transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1)
+$underline-grow-duration: 0.3s ease-out
+$mobile-slide-distance: -20px
+$hover-scale: 1.04
+$hover-translate: 8px
+
+@use "sass:color"
+
+body.dark-theme
+    background: linear-gradient(135deg, color.adjust($navbar-bg, $lightness: -10%) 0%, #1e293b 100%)
+    color: $navbar-text
+    font-family: 'Inter', $navbar-font-list, sans-serif
+    line-height: 1.6
+    min-height: 100vh
+
+.resume-container
+    max-width: 1100px
+    margin: 2.5rem auto
+    padding: 0 $navbar-padding-x
+    display: grid
+    gap: 3rem
+    position: relative
+    z-index: 1
+
+.glass-card
+    background: rgba(color.adjust($navbar-bg, $lightness: 8%), 0.5)
+    backdrop-filter: blur(14px)
+    -webkit-backdrop-filter: blur(14px)
+    border: 1px solid rgba($navbar-accent, 0.2)
+    border-radius: 1.2rem
+    padding: 2rem
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4)
+    transition: all $transition-medium
+
+    &:hover
+        transform: translateY(-6px)
+        box-shadow: 0 16px 60px rgba($navbar-accent, 0.12)
+
+.glass-inner
+    background: rgba($navbar-bg, 0.3)
+    border-radius: 0.8rem
+    padding: 1.2rem
+    margin-bottom: 1rem
+
+.edu-column .edu-item
+    margin-bottom: 1.5rem
+
+p:not(.nav-selectors)
+    margin: 0.3rem 0
+
+.paragraph-verion-1
+    font-size: 14px
+    margin-left: 1rem
+.paragraph-verion-2
+    font-size: 12px
+    margin-left: 2rem
+
+strong
+    font-weight: 600
+
+.awards-column ul
+    margin-top: 0.5rem
+
+.resume-header
+    text-align: center
+    padding: 4rem 2rem 2.5rem
+
+h1:not(.nav-hyperlinks, .nav-selector, .nav-links)
+    font-size: 3.5rem
+    font-weight: 800
+    margin: 0
+    background: linear-gradient(90deg, $navbar-accent, $navbar-hover, color.adjust($navbar-accent, $lightness: 20%))
+    -webkit-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    letter-spacing: -1px
+
+.contact-info
+    margin-top: 1rem
+    font-size: 1.15rem
+    opacity: 0.9
+
+.side-animation
+    position: fixed
+    top: 0
+    width: 60px
+    height: 100%
+    z-index: -10
+    opacity: 0.4
+
+#side-animation-left
+    left: 0
+
+#side-animation-right
+    right: 0
+
+h2
+    font-size: 2.1rem
+    font-weight: 600
+    margin: 0 0 1.2rem
+    position: relative
+    display: inline-block
+
+    &::after
+        content: ''
+        position: absolute
+        bottom: -8px
+        left: 0
+        width: $underline-width
+        height: 4px
+        background: linear-gradient(90deg, $navbar-accent, $navbar-hover)
+        border-radius: 4px
+        transition: width 0.3s ease-in
+
+    &:hover::after
+        width: 100%
+        transition: width 0.3s ease-out
+
+.experience-grid,
+.projects-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))
+    gap: 2rem
+
+.wide-card
+    grid-column: 1 / span 2
+
+.job h3,
+.project-card h3
+    font-size: 1.5rem
+    color: $navbar-accent
+    margin: 0 0 0.5rem
+
+.company-dates
+    display: block
+    font-size: 1rem
+    opacity: 0.75
+    font-style: italic
+    margin-bottom: 1rem
+
+ul:not(.nav-hyperlinks, .nav-selector, .nav-links)
+    padding-left: 1.5rem
+    margin: 0.8rem 0
+
+li:not(.nav-hyperlinks, .nav-selector, .nav-links)
+    margin-bottom: 0.7rem
+    position: relative
+
+    &::before
+        content: "›"
+        color: $navbar-hover
+        position: absolute
+        left: -1.6rem
+        font-size: 1.3rem
+        line-height: 1
+
+.skills-list
+    display: grid
+    grid-template-columns: repeat(0.5fr, minmax(260px, 1fr))
+    gap: 1.2rem
+    list-style: none
+    padding: 0
+
+li:not(.nav-hyperlinks, .nav-selector, .nav-links)
+    background: rgba($navbar-accent, 0.08)
+    padding: 1rem 1.3rem
+    border-radius: 12px
+    border: 1px solid rgba($navbar-accent, 0.2)
+    transition: $transition-fast
+
+    &:hover
+        background: rgba($navbar-accent, 0.15)
+        transform: scale($hover-scale)
+
+.split-columns
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 2.5rem
+
+.resume-footer
+    text-align: center
+    margin: 4rem 0 2rem
+    font-size: 1rem
+    opacity: 0.85
+
+a:not(.nav-hyperlinks)
+    color: $navbar-accent
+    text-decoration: none
+    transition: $transition-fast
+
+    &:hover
+        color: $navbar-hover
+        text-decoration: underline
+
+@media (max-width: 768px)
+    .resume-container
+        margin: 1.5rem auto
+        padding: 0 4%
+
+    .wide-card
+        grid-column: 1 / span 1
+
+    .resume-header
+        padding: 3rem 1.5rem 2rem
+
+    h1
+        font-size: 2.8rem
+
+    h2
+        font-size: 1.8rem
+
+    .split-columns
+        grid-template-columns: 1fr
